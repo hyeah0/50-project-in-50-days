@@ -52,3 +52,54 @@
         display: none;
     }
 }
+
+/* =========================== */
+
+.day1_recap{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.img{
+    width: 80%;
+    height: 20%;
+    margin: 10px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: height 0.9s ease-in-out;
+}
+
+.img h3{
+    opacity: 0;
+    padding: 5px 15px;
+}
+
+.img.move h3{
+    opacity: 1;
+   text-align: right;
+   color: white;
+   transition: opacity 0.4s ease-in-out 0.6s;
+}
+
+.move{
+    width: 80%;
+    height: 60%;
+    transition: height 0.9s ease-in-out;
+}
+
+@media (max-height : 400px){
+    .img:nth-of-type(4),
+    .img:nth-of-type(5){
+        display: none;
+    }
+}
