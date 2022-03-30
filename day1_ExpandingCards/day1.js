@@ -33,3 +33,23 @@ function removeClasses(){
         img.classList.remove('move');
     })
 }
+
+
+// =================================
+
+const imgsRecap2 = document.querySelectorAll('.img_recap2');
+console.log(imgsRecap2);
+
+imgsRecap2.forEach((imgRecap2) => {
+    imgRecap2.addEventListener('click',() => {
+        reclick();
+        imgRecap2.classList.add('move_recap2');
+    })
+})
+
+function reclick(){
+    imgsRecap2.forEach((imgRecap2)=>{
+        imgRecap2.classList.remove('move_recap2');
+    })
+    
+}

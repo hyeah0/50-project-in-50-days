@@ -103,3 +103,67 @@
         display: none;
     }
 }
+
+/* =============================== */
+.day1_recap2{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: black; */
+}
+
+.block{
+    /* width: 100vw;
+    height: 50vh; */
+    display: flex;
+    justify-content: center;
+}
+
+.block1{
+    /* display: flex;
+    flex-direction: row; */
+    align-items: flex-end;
+}
+
+.block2{
+    align-items: flex-start;
+}
+
+
+.img_recap2{
+    width: 20vw;
+    height: 20vh;
+    flex: 1;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: 1s ease-in-out;
+}
+
+.img_recap2 h3{
+    opacity: 0;
+}
+
+.img_recap2.move_recap2 h3{
+    opacity: 1;
+    color: white;
+    transition: 0.3s ease-in 0.6s;
+}
+
+.move_recap2{
+    width: 50vw;
+    height: 50vh;
+}
+
+/* .move_connected{
+    width: 50vw;
+} */
