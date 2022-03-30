@@ -1,7 +1,10 @@
 :root{
     --line-border-fill: #3498db;
     --line-border-empty: #e0e0e0;
+    --review1-fill: #e0ccd4;
+    --cantclick: #f7f7f7b6;
 }
+
 
 .day2-body{
     width: 100vw;
@@ -35,7 +38,7 @@
     top: 50%;
     left: 0;
     transform: translateY(-50%);
-    z-index: -1;
+    z-index: 0;
     /* transition: .4s ease; */
 }
 
@@ -47,7 +50,7 @@
     top: 50%;
     left: 0;
     transform: translateY(-50%);
-    z-index: -1;
+    z-index: 1;
     transition: .4s ease;
 }
 
@@ -62,10 +65,12 @@
     border-radius: 50%;
     border: 3px solid var(--line-border-empty);
     transition: .4s ease;
+    z-index: 3;
 }
 
 .circle.active {
     border-color: var(--line-border-fill);
+    z-index: 4;
 }
 
 .btn{
@@ -91,4 +96,89 @@
 .btn:disabled{
     background-color: var(--line-border-empty);
     cursor: not-allowed ;
+}
+
+
+/* =========================================== */
+
+.review1-container{
+   width: 100vw;
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+/* ==progress bar== */
+
+.review1-progress-container{
+    width: 80vw;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.review1-progress-container::before{
+    content: '';
+    width: 100%;
+    height: 4px;
+    background-color: var(--line-border-empty);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: -1;
+}
+
+.review1-progress{
+    width: 0%;
+    height: 4px;
+    background-color: var(--review1-fill);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: -1;
+    transition: 0.4s ease-in-out;
+}
+
+/* ==progress circle== */
+
+.review1-circle{
+    width: 30px;
+    height: 30px;
+    border: 4px solid var(--line-border-empty);
+    border-radius: 50%;
+    text-align: center;
+    background-color: white;
+    color: var(--line-border-empty);
+}
+
+.review1-active{
+    border: 4px solid var(--review1-fill);
+    color: black;
+    transition: 0.4s ease-in-out 0.4s;
+}
+
+/* ==btn== */
+
+.review1-btn-container{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;  
+}
+
+.review1-btn{
+    margin: 10px;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 10px;
+}
+
+.review1-btn:hover{
+    background-color: var(--hover-color);
+}
+
+.review1-btn:focus{
+    background-color: var(--review1-fill);
+    color: white;
 }
