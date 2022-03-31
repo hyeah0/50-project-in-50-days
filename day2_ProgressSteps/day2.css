@@ -2,7 +2,7 @@
     --line-border-fill: #3498db;
     --line-border-empty: #e0e0e0;
     --review1-fill: #e0ccd4;
-    --cantclick: #f7f7f7b6;
+    --review2-fill: #b8e2b4;
 }
 
 
@@ -181,4 +181,88 @@
 .review1-btn:focus{
     background-color: var(--review1-fill);
     color: white;
+}
+
+
+/* =========review2=============== */
+
+.review2-container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.review2-progress-container{
+    width: 80vw;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+/* ------------progress-bar------------ */
+
+.review2-progress-container::before{
+    content: '';
+    width: 100%;
+    height: 4px;
+    background-color: var(--line-border-empty);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: -1;
+}
+
+.review2-progressbar{
+    width: 0;
+    height: 4px;
+    background-color: var(--review2-fill);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: -1;
+    transition: 0.3s ease-in-out;
+}
+
+/* ------------circle------------ */
+
+.review2-circle{
+    width: 30px;
+    height: 30px;
+    border: 3px solid var(--line-border-empty);
+    border-radius: 50%;
+    background-color: white;
+    color: var(--line-border-empty);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease-in-out;
+} 
+
+.review2-active{
+ color: rgb(63, 63, 63);
+ border: 3px solid var(--review2-fill);
+ transition: 0.3s ease-in-out 0.2s;
+}
+
+/* ------------btn------------ */
+
+.review2-button{
+  margin-top: 30px;  
+}
+
+#review2-btn{
+    margin: 10px;
+    padding: 10px 30px;
+    border: 0;
+    border-radius: 25px;
+}
+
+#review2-btn:focus{
+    background-color: var(--review2-fill);
 }
