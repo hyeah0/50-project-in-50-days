@@ -2,6 +2,7 @@
 
 @import url(./day1_ExpandingCards/day1.css);
 @import url(./day2_ProgressSteps/day2.css);
+@import url(./day3_RotatingNavigation/day3.css);
 
 *{
     font-family: 'Muli', sans-serif;

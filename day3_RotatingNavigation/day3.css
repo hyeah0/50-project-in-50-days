@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+.day3-body{
+    font-family: 'Lato', sans-serif;
+    /* overflow-x: hidden; */
+    background-color: #333;
+    color: #222;
+}
+
+/* --------- move container --------- */
+.day3-container{
+    width: 100vw;
+    min-height: 100vh;
+    padding: 50px;
+    background-color: #fafafa;
+    transform-origin: top left;
+    transition: transform 0.5s linear ;
+}
+
+.day3-show-nav{
+    transform: rotate(-20deg);
+}
+
+/* --------- circle container --------- */
+.day3-circle-container{
+    position: fixed;
+    top: -100px;
+    left: -100px;
+}
+
+.day3-circle{
+    width: 200px;
+    height: 200px;
+    background-color: #ff7979;
+    border-radius: 50%;
+    position: relative;
+    transition: transform 0.5s linear;
+}
+
+/* --------- open 버튼 클릭시 원형 돌아감 --------- */
+.day3-container.day3-show-nav .day3-circle{
+    transform: rotate(-70deg);
+}
+
+.day3-circle button{
+    height: 100px;
+    border: 0;
+    background-color: transparent;
+    color: white;
+    font-size: 26px;
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    
+    cursor: pointer;
+}
+
+.day3-circle button#day3-open{
+    left: 60%;
+}
+
+.day3-circle button#day3-close{
+    top: 60%;
+    transform: rotate(90deg);
+    transform-origin: top left;
+}
+
+.day3-container.day3-show-nav + .day3-nav li{
+    transform: translateX(0);
+    transition-delay: 0.3s;
+}
+
+/* --------- nav --------- */
+.day3-nav{
+     position: fixed;
+     bottom: 40px;
+     left: 0;
+    z-index: 100;
+ }
+
+.day3-nav ul{
+    list-style: none;
+    padding-left: 30px;
+}
+
+.day3-nav ul li{
+    text-transform: uppercase;
+    color: #fff;
+    margin: 40px 0;
+    transform: translateX(-100%);
+    transition: transform 0.4s ease-in;
+}
+
+.day3-nav ul li i{
+    font-size: 20px;
+    margin: 10px;
+}
+
+.day3-nav ul li + li{
+    margin-left:15px;
+    transform: translateX(-150%);
+}
+
+.day3-nav ul li + li + li{
+    margin-left:30px;
+    transform: translateX(-200%);
+}
+
+/* --------- content --------- */
+
+.day3-content{
+    max-width: 1000px;
+    margin: 50px auto;
+}
+
+.day3-content h1{
+    margin: 0;
+}
+
+.day3-content small{
+    color: #555;
+    font-style: italic;
+}
+
+.day3-content p{
+    color: #333;
+    line-height: 1.5;
+}
+
+.day3-content h3{
+    margin: 10px 0px;
+}
+
+.day3-content img{
+    max-width: 100%;
+}
