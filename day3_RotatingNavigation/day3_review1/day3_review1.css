@@ -1,0 +1,142 @@
+:root{
+    --point-color : #FEDFE4;
+    --back-color: #336158;
+}
+
+.d3r1-body{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--back-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.d3r1-container{
+    background-color: rgb(255, 255, 255);
+    transform-origin: top left;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 2;
+    transition: transform 0.5s linear;
+}
+
+.d3r1-rotate{
+    transform: rotate(-20deg);
+}
+
+/* --------- circle --------- */
+
+.d3r1-circle-container{
+    position: fixed;
+    top: -100px;
+    left: -100px;
+    z-index: 3;
+    transition: 0.8s linear;
+}
+
+.d3r1-circle-rotate{
+    transform: rotate(-90deg);
+}
+
+.d3r1-circle{
+    width: 200px;
+    height: 200px;
+    background-color: var(--point-color);
+    border-radius: 50%;
+    position: relative;
+}
+
+.d3r1-circle button{
+ background-color: transparent;
+ color: var(--back-color);
+ border: none;
+ position: absolute;
+ cursor: pointer;
+}
+
+.d3r1-circle button.d3r1-nav{
+    top: 65%;
+    left: 65%;
+}
+
+.d3r1-circle button.d3r1-close-nav{
+    top: 65%;
+    left: 25%;
+}
+
+.d3r1-circle button i{
+    font-size: 1.8rem;
+}
+
+/* --------- container 내부 --------- */
+
+.d3r1-content-container{
+    margin: 20px;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.d3r1-content-container small{
+    font-style: italic;
+    display: block;
+}
+
+.d3r1-content-container p{
+    margin: 15px 0px 20px 0px;
+    text-align: center;
+}
+
+.d3r1-content-container h3{
+    margin-bottom: 10px;
+}
+
+.d3r1-content-container img{
+    width: 90vw;
+    padding-right: 10px;
+}
+
+
+/* --------- nav --------- */
+.d3r1-nav-container{
+    color: var(--point-color);
+    position: fixed;
+    left: 0px;
+    bottom: 50px;
+    z-index: 1;
+}
+
+.d3r1-nav-container ul{
+    list-style: none;
+}
+
+.d3r1-nav-container ul li{
+    text-transform: uppercase;
+    padding: 10px;
+    font-size: 20px;
+    transform: translateX(-100%);
+    transition: transform 0.5s ease-in-out;
+}
+
+.d3r1-nav-container ul li + li{
+    margin-left: 10px;
+    transform: translateX(-115%);
+}
+
+.d3r1-nav-container ul li + li +li{
+    margin-left: 20px;
+    transform: translateX(-125%);
+}
+
+.d3r1-nav-container ul li i{
+    padding: 10px;
+}
+
+.d3r1-container.d3r1-rotate + .d3r1-nav-container li{
+    transform: translateX(0);
+    transition-delay: 0.3s;
+    opacity: 1;
+}
