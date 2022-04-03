@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+*{
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-image: linear-gradient(90deg, #7d5fff, pink);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.d4-form{
+    position: relative;
+    height: 50px;
+}
+
+.d4-input, 
+.d4-btn{
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.375);
+    border: 0;
+    border-radius: 2px;
+}
+
+.d4-input{
+    padding: 15px;
+    font-size: 18px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    transition: width 0.5s ease-in-out;
+}
+
+.d4-btn{
+    background-color: #fff;
+    font-size: 24px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    transition: transfrom 0.5s ease;   
+}
+
+.d4-input:focus, 
+.d4-btn:focus{
+    outline: none;
+}
+
+.d4-form.active .d4-input{
+    width: 350px;
+}
