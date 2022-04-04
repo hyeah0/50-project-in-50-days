@@ -1,0 +1,36 @@
+/* https://cdn.pixabay.com/photo/2021/11/04/05/33/dome-6767422_1280.jpg */
+
+@import url('http://fonts.googleapis.com/css?family=Ubuntu');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg{
+    width: calc(100vw + 60px);
+    height: calc(100vh + 60px);
+    background-image: url('https://cdn.pixabay.com/photo/2021/11/04/05/33/dome-6767422_1280.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    z-index: -1;
+    filter: blur(0px);
+}
+
+.loading-text{
+    color: #fff;
+    font-size: 50px;
+}
