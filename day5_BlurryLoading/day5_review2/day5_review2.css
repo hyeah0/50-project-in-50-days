@@ -1,0 +1,31 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg{
+    width: calc(100vw + 60px);
+    height: calc(100vh + 60px);
+    background-image: url('https://cdn.pixabay.com/photo/2022/03/05/18/34/animal-7050010_1280.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    z-index: -1;
+    filter: blur(0px);
+}
+
+.loading-text{
+    color: #fff;
+    font-size: 50px;
+}
