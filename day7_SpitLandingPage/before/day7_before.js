@@ -1,13 +1,9 @@
-const boxes= document.querySelectorAll('.box');
+const left = document.querySelector(".left");
+const right = document.querySelector(".right");
+const container = document.querySelector(".container");
 
-console.log(boxes);
+left.addEventListener("mouseover",() => container.classList.add("hover-left"));
+left.addEventListener("mouseleave",() => container.classList.remove("hover-left"));
 
-boxes.forEach(box => {
-    console.log(box);
-})
-
-// boxes.addEventListener('mouseover',active);
-
-// function active(){
-//     console.log("a");
-// }
+right.addEventListener("mouseover",() => container.classList.add("hover-right"));
+right.addEventListener("mouseleave",() => container.classList.remove("hover-right"));

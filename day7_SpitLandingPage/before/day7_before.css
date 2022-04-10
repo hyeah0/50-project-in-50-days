@@ -1,3 +1,13 @@
+:root{
+    --left-bg-color : rgba(92, 37, 1, 0.4);
+    --right-bg-color : rgba(255, 255, 0, 0.4);
+    --btn-color : rgba(255, 255, 255, 0.356);
+    --left-btn-color : rgb(58, 23, 0);
+    --right-btn-color : rgb(255, 255, 0);
+    --hover-width : 75%;
+    --other-width: 25%;
+}   
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -5,68 +15,128 @@
     font-family: sans-serif;
 }
 
-body{
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    overflow: hidden;
+h1{
+    font-size: 5rem;
+    color: #fff;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+
+.btn{
+    width: 15rem;
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+    border: 2px solid #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+
+.btn:hover{
+    background-color: var(--btn-color);
+}
+
+.box.left .btn:hover{
+    border-color: var(--left-btn-color);
+}
+
+.box.right .btn:hover{
+    border-color: var(--right-btn-color);
 }
 
 /* 전체 틀 */
-.box{
+.container{
+    width: 100vw;
     height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
     position: relative;
 }
 
-.box img{
-    z-index: -1;
-}
-
-.text-box{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: absolute;
-    top: 100px;
-}
-
-.text-box h1{
-    color: white;
-    margin-bottom: 30px;
-}
-
-.text-box button{
-    padding: 10px 30px;
-    background-color: transparent;
-    color: white;
-    border: 2px solid white;
+.box{
+    width: 50%;
+    height: 100vh;
+    overflow: hidden;
+    transition: width 0.5s ease-in-out;
 }
 
 /* 세부 */
 
-/* 초콜렛 박스 */
-.box1{
-    background-color: rgba(113, 30, 0, 0.543);
+/* 왼쪽 박스 */
+.box.left{
+    background-image: url('https://cdn.pixabay.com/photo/2019/06/02/20/52/food-4247480_1280.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
-.box1 .text-box button:hover{
-    background-color: rgba(113, 30, 0, 0.86);
+.box.left::before{
+    content: '';
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--left-bg-color);
 }
 
-/* 사탕박스 */
-.box2{
-   background-color: rgba(255, 166, 0, 0.543);
+/* 오른쪽 박스 */
+.box.right{
+    background-image: url('https://cdn.pixabay.com/photo/2017/01/04/19/41/candes-1952997_1280.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
-.box2 .text-box button:hover{
-    background-color: rgba(255, 166, 0, 0.86);
+.box.right::before{
+    content: '';
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--right-bg-color);
 }
 
 /* mouseover acitve */
 
-.box.active{
-    width: 70vw;
+.hover-left .left{
+    width: var(--hover-width);
+}
+
+.hover-left .right{
+    width: var(--other-width);
+}
+
+.hover-right .right{
+    width: var(--hover-width);
+}
+
+.hover-right .left{
+    width: var(--other-width);
+}
+
+
+
+/* 반응형 */
+/* 
+* max-width == 화면이 800px 까지 적용 사항(0~799px까지) 
+* 태그 적용시 상단에 있는 태그 값과 동일하게 적는다. 
+  상단에 .container h1 으로 작성했으면 반응형 태그도 .container h1 으로 작성
+*/
+
+@media (max-width : 750px){
+    h1{
+        font-size: 3.5rem;
+    }
+    .btn{
+        padding: 1.2rem;
+    }
 }
