@@ -44,7 +44,6 @@ form{
     border: 0;
     border-bottom: 2px solid rgba(253, 144, 48, 0.625);
     background-color: transparent;
-    transition: transform 2s ease-in-out;
 }
 
 /* input 클릭시 아웃라인 제거 */
@@ -57,11 +56,16 @@ form{
     position: absolute;
     top: 20px;
     left: 0px;
-    transition: transform 0.5s ease-in-out;
 }
 
-.form-control input:focus + label ,
-.form-control input:focus + label {
+.form-control label span{
+    display: inline-block;
+    transition: 0.3s
+    cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form-control input:focus + label span,
+.form-control input:valid + label span{
     transform: translateY(-30px);
 }
 
