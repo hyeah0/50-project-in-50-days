@@ -60,11 +60,7 @@
 
 ### js
 
-#### 1. label을 배열로 변경
-
-    const labels = document.querySelectorAll(".form-control label");
-
-#### 2. 배열 각 요소에 함수
+#### 1. 배열 각 요소에 함수
 
     labels.forEach(label => {
         label.innerHTML = label.innerText
