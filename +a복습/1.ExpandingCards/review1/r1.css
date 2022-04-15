@@ -1,0 +1,64 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img{
+    margin: 10px;
+    width: 100px;
+    height: 80vh;
+    border-radius: 10px;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    transition: width 0.8s ease-in-out;
+}
+
+span{
+    margin: 10px;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    text-transform: uppercase;
+    /* background-color: rgba(255, 255, 255, 0.561); */
+    opacity: 0;
+   
+}
+
+.active{
+    width: 50vw;
+}
+
+.active span{
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+    
+}
+
+/* 이미지 링크*/
+.spring{
+    background-image: url("https://cdn.pixabay.com/photo/2020/05/13/11/38/cherry-blossoms-5167156_1280.jpg"); 
+}
+
+.summer{
+    background-image: url("https://cdn.pixabay.com/photo/2017/06/17/18/35/background-2413081_1280.jpg");
+}
+
+.autumn{
+    background-image: url("https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072821_1280.jpg");
+}
+
+.winter{
+    background-image: url("https://cdn.pixabay.com/photo/2020/02/08/14/36/trees-4830285_1280.jpg");
+}
+

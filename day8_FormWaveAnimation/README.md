@@ -15,7 +15,7 @@
     background-color: rgba(253, 144, 48, 0.625);
     box-shadow: 0px 2px 5px rgba(119, 65, 19, 0.625);}
 
-## 복습시 헷갈렸던 부분
+## 복습시 헷갈린 부분
 
 ### html
 
