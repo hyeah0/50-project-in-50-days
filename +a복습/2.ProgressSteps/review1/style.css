@@ -1,6 +1,6 @@
 :root{
-    --color-point: rgb(255, 192, 192);
-    --color-base: rgb(199, 187, 187);
+    --color-point: rgb(225, 177, 177);
+    --color-base: rgb(234, 223, 223);
 }
 
 *{
@@ -27,32 +27,54 @@
     margin-bottom: 50px;
 }
 
-.step_bar{
+.step_container:before{
+    content: "";
     width: 100%;
-    height: 8px;
+    height: 5px;
     background-color: var(--color-base);
     position: absolute;
     top: 50%;
+    left: 0%;
     transform: translateY(-50%);
     z-index: -1;
 }
 
+.step_bar{
+    width: 0%;
+    height: 5px;
+    background-color: var(--color-point);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: -1;
+    transition: width 0.5s ease-in-out;
+}
+
 .step{
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     padding: 10px;
     border-radius: 50%;
-    border: 8px solid var(--color-base);
+    border: 5px solid var(--color-base);
     background-color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: border 0.5s ease-in-out; 
+}
+
+.step.active{
+    border: 5px solid var(--color-point);
 }
 
 .btn{
-    margin: 5px;
+    margin: 10px;
     padding: 10px 30px;
     background-color: var(--color-base);
     border: none;
     border-radius: 5px;
+}
+
+.btn:hover{
+    transform: scale(1.02);
 }
