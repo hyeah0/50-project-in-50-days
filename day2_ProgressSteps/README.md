@@ -1,14 +1,12 @@
 # review
 
-## 복습시 기억 안나는 부분(헷갈리는 부분)
-
 ### js
 
-#### 1. step 색상 바꾸기
+#### 1. step 색상 바꾸기 (22.04.18)
 
-#### 2.step_bar 색상바꾸기
+#### 2.step_bar 색상바꾸기 (22.04.18)
 
-#### 3.prev.next 버튼 disabled 설정
+#### 3.prev.next 버튼 disabled 설정 (22.04.18)
 
     let currentactive = 1;
 
