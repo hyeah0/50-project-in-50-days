@@ -24,7 +24,7 @@ udemy-50 project in 50 days (HTML,CSS,JS)
 
 ## 17 movie api
 
-<img src="https://github.com/hyeah0/HTML-CSS/blob/master/cssPractice/udemy_50CSS/img/17_movie.png" width="70%">
+<img src="https://github.com/hyeah0/50-project-in-50-days/blob/main/img/17_movie.png" width="70%">
 <br>
 
 - 데이터 : movie api로 데이터 가져오기
@@ -33,7 +33,7 @@ udemy-50 project in 50 days (HTML,CSS,JS)
 
 ## 18 background slider
 
-<img src="https://github.com/hyeah0/HTML-CSS/blob/master/cssPractice/udemy_50CSS/img/18_slider.png" width="70%">
+<img src="https://github.com/hyeah0/50-project-in-50-days/blob/main/img/18_slider.png" width="70%">
 <br>
 
 - css : 백그라운드 이미지 위에 반투명 효과
