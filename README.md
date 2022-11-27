@@ -44,4 +44,4 @@ udemy-50 project in 50 days (HTML,CSS,JS)
   transform: translateY(-50%);
   ```
 - js : 이미지 변경
-- <a href="https://github.com/hyeah0/50-project-in-50-days/tree/main/18_background_slider">코드</a>
+- <a href="https://github.com/hyeah0/50-project-in-50-days/tree/main/18_background_silder">코드</a>
